@@ -2,39 +2,34 @@
 
 import Link from 'next/link';
 
-export default function Question6() {
+export default function Question10() {
+  const resources = [
+    "Vercel Security Overview",
+    "Vercel Enterprise Security Whitepaper",
+    "Vercel Secure Compute Documentation",
+    "Vercel Compliance and Certifications",
+    "Vercel Enterprise Plan Features",
+    "Vercel Edge Network Overview",
+    "YouTube Video: 'Vercel Enterprise Security Features'",
+    "Case Studies of Enterprise Customers",
+    "Vercel API Documentation",
+    "Vercel Status Page"
+  ];
+
   return (
-    <div style={{
-      backgroundColor: 'black',
-      color: 'white',
-      fontFamily: 'Arial, sans-serif',
-      minHeight: '100vh',
-      padding: '20px',
-    }}>
-      <h1>Question 10: [Resources for CISO Onboarding]</h1>
-      <p>To prepare for the CISO onboarding session, I would gather these resources:</p>
-            <ul>
-                <li>Vercel Security Overview</li>
-                <li>Vercel Enterprise Security Whitepaper</li>
-                <li>Vercel Secure Compute Documentation</li>
-                <li>Vercel Compliance and Certifications</li>
-                <li>Vercel Enterprise Plan Features</li>
-                <li>Vercel Edge Network Overview</li>
-                <li>YouTube Video: "Vercel Enterprise Security Features"</li>
-                <li>Case Studies of Enterprise Customers</li>
-                <li>Vercel API Documentation</li>
-                <li>Vercel Status Page</li>
-            </ul>
-            <p>I would also prepare a custom migration roadmap tailored to the CISO's specific needs and concerns.</p>
+    <div className="min-h-screen bg-black text-white p-8 font-sans">
+      <h1 className="text-3xl font-bold mb-6">Question 10: Resources for CISO Onboarding</h1>
+      <p className="mb-4">To prepare for the CISO onboarding session, I would gather these resources:</p>
+      <ul className="list-disc pl-6 mb-6">
+        {resources.map((resource, index) => (
+          <li key={index} className="mb-2">{resource}</li>
+        ))}
+      </ul>
+      <p className="mb-6">I would also prepare a custom migration roadmap tailored to the CISO's specific needs and concerns.</p>
       <Link href="/">
-        <button style={{
-          backgroundColor: 'blue',
-          color: 'white',
-          border: 'none',
-          padding: '10px 20px',
-          cursor: 'pointer',
-          borderRadius: '5px',
-        }}>Back to Home</button>
+        <button className="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 transition-colors">
+          Back to Home
+        </button>
       </Link>
     </div>
   );
